@@ -14,6 +14,7 @@ public class OpenCircuitBreakerCommand extends HystrixCommand<String> {
 
   @Override
   protected String run() throws Exception {
+    // 命令执行总会超时
     Thread.sleep(800);
     return "";
   }
